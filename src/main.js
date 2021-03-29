@@ -1,6 +1,19 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(data);
+// console.log(data);
+// console.log(data.pokemon)
+// console.log(data.pokemon[1].name)
+// console.log(data)
+// document.getElementById(" ")
+
+var mostrarMenu= document.querySelector("#start")
+
+mostrarMenu.addEventListener("click",showMenu)
+
+function showMenu(){
+    document.querySelector("#page2").style.display ="block"
+    document.querySelector("#page1").style.display ="none"
+}
+
+
+
