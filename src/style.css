@@ -10,8 +10,7 @@ body{
     background-image:url(Imagenes\ 2/calipso.jpg);
     background-repeat: no-repeat;
     background-attachment:scroll;
-    background-size:65%;
-    background-position: center;
+    background-size:100%;
     min-height: 100vh;
   
 }
@@ -63,8 +62,14 @@ button:hover{
   
   .menu_type{
       display: none;
-  }
 
+  }
+  
+.continer{
+    display: flex;
+    flex-direction: row;
+    
+}
   .flex-container{
       display: flex;
       flex-direction: column;
