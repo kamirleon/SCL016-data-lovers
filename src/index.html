@@ -14,7 +14,7 @@
 
   <section class="page_welcome" id="page1">
     <div class="flex-container">
-     
+
       <input id="start" class="animated flash" TYPE="IMAGE" SRC="Imagenes 2/pokebola.png" width="300">
 
       <img src="Imagenes 2/Name page.png" alt="name of page" width="350">
@@ -28,51 +28,72 @@
         <h1>Busca tu Pokémon!!</h1>
       </div>
       <div>
-        <input type="search" placeholder="Nombre">
-        <!-- <input type="submit" value="&#10140;" /> -->
+        <input type="text" placeholder="Nombre" id="searchName">
+        <button class="button" id="search">Buscar</button>
+
       </div>
       <div>
         <button class="button" id="type"> Tipo</button>
       </div>
       <div>
-        <button class="button"> Ataque</button>
+        <button class="button" id="attack"> Ataque</button>
       </div>
     </div>
   </section>
+  <!-- seccion cartilla -->
+  <section class="menu_name" id="menu_name">
 
-  <section class="menu_name">
-    <!--cartilla por Pokémon -->
+    <header>
+      <img src="imagenes 2/Arrow 4.png" alt="15">
+      <h2 id="pokemon">
+
+      </h2>
+
+      <img src="imagenes 2/pokebola_abierta.png" alt="20">
+    </header>
+
+    <main>
+      <h3>Tipo:</h3>
+      <h3>Resistente</h3>
+      <h3>Debilidades</h3>
+    </main>
+
+    <footer>
+      <h1>Evoluciones</h1>
+    </footer>
   </section>
 
-  <section class="menu_type" id="menuType" >
-   <div class="container">
-    <h1>Tipo de Pokémon</h1>
-    <button class="button" id="button_water">Agua<img src="imagenes 2/Type_Agua.png" width="50"></button>
-    <button class="button" id="button_ground">Tierra<img src="imagenes 2/Type_Tierra.png" width="50"></button>
-    <button class="button" id="button_fire">Fuego<img src="imagenes 2/Type_Fuego.png" width="50"></button>
-    <button class="button" id="button_grass">Planta<img src="imagenes 2/Type_Planta.png" width="50"></button>
-    <button class="button" id="button_electric">Eléctrico<img src="imagenes 2/Type_El ctrico.png" width="50"></button>
-    <button class="button" id="button_fighting">Lucha<img src="imagenes 2/Type_Lucha.png" width="50"></button>
-    <button class="button" id="button_Ghost">Fantasma<img src="imagenes 2/Type_Fantasma.png" width="50"></button>
-    <button class="button" id="button_poison">Veneno<img src="imagenes 2/Type_Poison.png" width="50"></button>
-    <button class="button" id="button_flying">Volador<img src="imagenes 2/Type_Volador.png" width="50"></button>
-    <button class="button" id="button_rock">Roca<img src="imagenes 2/Type_Roca.png" width="50"></button>
-    <button class="button" id="button_dragon">Dragón<img src="imagenes 2/Type_Drag n.png" width="50"></button>
-    <button class="button" id="button_bug">Bicho<img src="imagenes 2/Type_Bug.png" width="50"></button>
-    <button class="button" id="button_psychic">Psíquico<img src="imagenes 2/Type_Ps quico.png" width="50"></button>
-    <button class="button" id="button_steel">Acero<img src="imagenes 2/Type_Steel.png" width="50"></button>
-    <button class="button" id="button_fairy">Hada<img src="imagenes 2/Type_Hada.png" width="50"></button>
-    <button class="button" id="button_normal">Normal<img src="imagenes 2/Type_Normal.png" width="50"></button>
-    <button class="button" id="button_ice">Hielo<img src="imagenes 2/Type_Ice.png" width="50"></button>
-    <button class="button" id="button_dark">Siniestro<img src="imagenes 2/Type_Steel.png" width="50"></button>
-  </div>
+  <section class="menu_type" id="menuType">
+    <div class="container">
+      <h1>Tipo de Pokémon</h1>
+      <button class="button" id="button_water">Agua<img src="imagenes 2/Type_Agua.png" width="50"></button>
+      <button class="button" id="button_ground">Tierra<img src="imagenes 2/Type_Tierra.png" width="50"></button>
+      <button class="button" id="button_fire">Fuego<img src="imagenes 2/Type_Fuego.png" width="50"></button>
+      <button class="button" id="button_grass">Planta<img src="imagenes 2/Type_Planta.png" width="50"></button>
+      <button class="button" id="button_electric">Eléctrico<img src="imagenes 2/Type_El ctrico.png" width="50"></button>
+      <button class="button" id="button_fighting">Lucha<img src="imagenes 2/Type_Lucha.png" width="50"></button>
+      <button class="button" id="button_Ghost">Fantasma<img src="imagenes 2/Type_Fantasma.png" width="50"></button>
+      <button class="button" id="button_poison">Veneno<img src="imagenes 2/Type_Poison.png" width="50"></button>
+      <button class="button" id="button_flying">Volador<img src="imagenes 2/Type_Volador.png" width="50"></button>
+      <button class="button" id="button_rock">Roca<img src="imagenes 2/Type_Roca.png" width="50"></button>
+      <button class="button" id="button_dragon">Dragón<img src="imagenes 2/Type_Drag n.png" width="50"></button>
+      <button class="button" id="button_bug">Bicho<img src="imagenes 2/Type_Bug.png" width="50"></button>
+      <button class="button" id="button_psychic">Psíquico<img src="imagenes 2/Type_Ps quico.png" width="50"></button>
+      <button class="button" id="button_steel">Acero<img src="imagenes 2/Type_Steel.png" width="50"></button>
+      <button class="button" id="button_fairy">Hada<img src="imagenes 2/Type_Hada.png" width="50"></button>
+      <button class="button" id="button_normal">Normal<img src="imagenes 2/Type_Normal.png" width="50"></button>
+      <button class="button" id="button_ice">Hielo<img src="imagenes 2/Type_Ice.png" width="50"></button>
+      <button class="button" id="button_dark">Siniestro<img src="imagenes 2/Type_Steel.png" width="50"></button>
+    </div>
   </section>
 
   <section class="type">
 
   </section>
 
-  <section class="menu_attack">
+  <section class="menu_attack" id="menu_attack">
+    <img src="imagenes 2/Arrow 4.png" alt="15">
+    <h1>Ataque</h1>
 
   </section>
 

@@ -1,9 +1,18 @@
 h1{
     font-family: 'Russo One', sans-serif;
-    font-size: 36px;
+    font-size: 60px;
     line-height: 43px;
     color: #FFD723;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+h2{
+  font-family: 'Russo One', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 body{
@@ -11,6 +20,7 @@ body{
     background-repeat: no-repeat;
     background-attachment:scroll;
     background-size:100%;
+    background-position: center;
     min-height: 100vh;
   
 }
@@ -40,6 +50,33 @@ body{
     -webkit-animation-name:initial;
     animation-name: flash;
    }
+
+#searchName{
+   border-radius: 20px;
+   background: linear-gradient(90.6deg, #ffffff 22.14%, #B3B3B3 93.61%);
+   padding: 10px;
+    width: 250px;
+    margin: 25px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    text-align: center;
+
+
+}
+#search{
+    background: linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);
+    box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 15px;
+    
+
+}
+
 .button{
     background: linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);
     box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
@@ -48,6 +85,8 @@ body{
     font-weight: 300;
     font-size: 30px;
     padding: 10px;
+    width: 250px;
+    margin: 25px;
     
     
 }
@@ -64,10 +103,15 @@ button:hover{
       display: none;
 
   }
-  
+  #menu_attack{
+      display: none;
+  }
 .continer{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+  
+    
     
 }
   .flex-container{
@@ -79,3 +123,55 @@ button:hover{
 
 
   }
+
+.menu_name{
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+
+
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    height: 71.24px;
+    left: 0px;
+    top: 47.23px;
+
+    background: #F2F2F2;
+    mix-blend-mode: overlay;
+    opacity: 0.7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-0.04deg);
+}
+main{
+    position: center;
+    width: 80%;
+    height: 311.24px;
+    left: 11px;
+    top: 100%;
+    
+    background: #F2F2F2;
+    mix-blend-mode: overlay;
+    opacity:0.7;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius:20;
+    transform:rotate(-0.41deg);
+}
+footer{
+  position: absolute;
+  width: 100%;
+  height: 71.24px;
+  left: 0px;
+  top: 47.23px;
+
+  background: #F2F2F2;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-0.04deg);
+
+}
