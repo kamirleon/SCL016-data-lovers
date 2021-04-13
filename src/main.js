@@ -25,17 +25,40 @@ function showType() {
 //   document.querySelector("#page2").style.display = "none"
 // }
 
+document.querySelector('#menuType').addEventListener('click', typesPokemon)
+
+function typesPokemon(){
+  document.querySelector('#types').style.display='block'
+  document.querySelector('#menuType').style.display='none'
+}
 // captura boton ataque y evento que muestra vista de ataque
 document.querySelector('#attack').addEventListener('click', menuAttack)
 
 // funcion mostar vista de ataque
 function menuAttack() {
-
-  document.querySelector('#menu_attack').style.display = 'block'
+    document.querySelector('#menu_attack').style.display = 'block'
   document.querySelector('#page2').style.display = 'none'
 }
 
+document.getElementById("button_water").addEventListener("click",()=>{
+// //paso uno: filtrar informacion
+ const buttonType= document.getElementById("menuType");
+  
+  
 const pokemonData = pokemon.pokemon;
+
+ const type_pokemonWater = pokemonData.filter(pokemonData => pokemonData.type.includes("water"));
+//paso 2:pintar esa informacion filtrada 
+ 
+ for(let i=0;i<type_pokemonWater.length;i++){
+   let titlePokemon=document.createElement("h1")
+   titlePokemon.textContent=type_pokemonWater[i].name
+   let list= document.getElementById("types")
+   list.appendChild(titlePokemon)
+
+   console.log(type_pokemonWater[i].name);
+ }
+ });
 
 // let attack= pokemonData.map(x => x.stats['base-attack']);
 // console.log(attack);
