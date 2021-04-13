@@ -1,99 +1,72 @@
 import pokemon from './data/pokemon/pokemon.js';
-
-// console.log(data);
-// console.log(data.pokemon);
-// console.log(pokemon.pokemon[1].name);
-// console.log(data)
-// document.getElementById(" ")
-
-var mostrarMenu = document.querySelector("#start")
-
-mostrarMenu.addEventListener("click", showMenu)
-
+// captura boton pokebola
+const buttonMenu = document.querySelector('#start')
+// evento para pasar a vista menu
+buttonMenu.addEventListener('click', showMenu)
+// mostar menu
 function showMenu() {
-  document.querySelector("#page2").style.display = "block"
-  document.querySelector("#page1").style.display = "none"
+  document.querySelector('#page2').style.display = 'block'
+  document.querySelector('#page1').style.display = 'none'
+}
+// captura boton tipo
+const buttonType = document.querySelector('#type')
+// evento para mostrar vista de tipos
+buttonType.addEventListener('click', showType)
+// mostrar tipos
+function showType() {
+  document.querySelector('#menuType').style.display = 'block'
+  document.querySelector('#page2').style.display = 'none'
+}
+// mostrar cartilla de pokemones
+// document.querySelector('#search').addEventListener('click',letterPokemon)
 
+// function letterPokemon() {
+//   document.querySelector("#menu_name").style.display = "block"
+//   document.querySelector("#page2").style.display = "none"
+// }
+
+// captura boton ataque y evento que muestra vista de ataque
+document.querySelector('#attack').addEventListener('click', menuAttack)
+
+// funcion mostar vista de ataque
+function menuAttack() {
+
+  document.querySelector('#menu_attack').style.display = 'block'
+  document.querySelector('#page2').style.display = 'none'
 }
 
-var showType = document.querySelector("#type")
-showType.addEventListener("click", typePokemon)
-
-function typePokemon() {
-  document.querySelector("#menuType").style.display = "block"
-  document.querySelector("#page2").style.display = "none"
-}
-
-document.querySelector("#search").addEventListener('click',letterPokemon)
-
-function letterPokemon() {
-  document.querySelector("#menu_name").style.display = "block"
-  document.querySelector("#page2").style.display = "none"
-}
-
-document.querySelector("#attack").addEventListener('click',menuAttack)
-
-function menuAttack(){
-
-document.querySelector("#menu_attack").style.display="block"
-document.querySelector("#page2").style.display="none"
-}
 const pokemonData = pokemon.pokemon;
 
-let type_pokemon = pokemonData.filter(pokemonData => pokemonData.type == "fire"); 
-
-console.log(type_pokemon);
-
-
-let attack= pokemonData.map(x => x.stats['base-attack']);
-
-console.log(attack);
-
-attack.sort(orderAttack)
-function orderAttack(a, b) {
-  return a - b
-}
-
-console.log(attack)
-  
-
-const text = document.querySelector('#searchName');
-
-const search = document.querySelector('#search');
-
-const resultadoPokemon = document.querySelector('#pokemon');
-
-const filtrar = ()=> {
-
-  resultadoPokemon.innerHTML = '';
-
-  const textName = text.value.toLowerCase();
-
-  for (let pokemones of pokemonData) {
-    let name = pokemones.name.toLowerCase();
-    if (name.indexOf(textName) !== -1) {
-      resultadoPokemon.innerHTML += `<h1>${pokemones.name}</h1>`
-    }
-  }
-  if (resultadoPokemon.innerHTML === '') {
-    `<h2>Pokemon no encontrado</h2>`
-  }
-}
-search.addEventListener('click', filtrar)
-
-text.addEventListener('keyup', filtrar)
-// filtrar();
-
-
-
+// let attack= pokemonData.map(x => x.stats['base-attack']);
+// console.log(attack);
+// 
+// attack.sort(orderAttack)
+// function orderAttack(a, b) {
+//   return b - a
+// }
+// console.log(attack);
 
 // //(captura el valor que se ingresa al input)
-// document.querySelector("#searchName").addEventListener("change",(event)=>{console.log(event.target.value)})
+document.querySelector("#searchName").addEventListener("keyup", (event) => {
 
+  const listaFiltrada = pokemonData.filter(poke => poke.name.startsWith(event.target.value))
+  let list2 = document.getElementById("list_pokemon")
+  list2.innerHTML = ''
 
+ // console.log(listaFiltrada)
 
+  for (let i = 0; i < listaFiltrada.length; i++) {
+    let list_name = document.createElement("h2")
+    list_name.textContent = listaFiltrada[i].name
+    // list_name.addEventListener('click', letterPokemon)
+    let list = document.getElementById("list_pokemon")
+    let img_poke = document.createElement("img")
+    img_poke.src = listaFiltrada[i].img
 
+    list.appendChild(list_name)
+    list.appendChild(img_poke)
 
-
-
-
+    //console.log(listaFiltrada[i].name);
+  }
+}
+);
