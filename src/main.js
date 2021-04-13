@@ -1,34 +1,28 @@
 import pokemon from './data/pokemon/pokemon.js';
 
-// console.log(data);
-// console.log(data.pokemon);
-// console.log(pokemon.pokemon[1].name);
-// console.log(data)
-// document.getElementById(" ")
+const mostrarMenu = document.querySelector("#start")
 
-var mostrarMenu = document.querySelector("#start")
+ mostrarMenu.addEventListener("click", showMenu)
 
-mostrarMenu.addEventListener("click", showMenu)
-
-function showMenu() {
+ function showMenu() {
   document.querySelector("#page2").style.display = "block"
   document.querySelector("#page1").style.display = "none"
 
 }
 
-var showType = document.querySelector("#type")
-showType.addEventListener("click", typePokemon)
+ const showType = document.querySelector("#type")
+ showType.addEventListener("click", typePokemon)
 
-function typePokemon() {
-  document.querySelector("#menuType").style.display = "block"
-  document.querySelector("#page2").style.display = "none"
-}
+ function typePokemon() {
+   document.querySelector("#menuType").style.display = "block"
+   document.querySelector("#page2").style.display = "none"
+ }
 
-document.querySelector("#search").addEventListener('click',letterPokemon)
+   document.querySelector("#search").addEventListener('click',letterPokemon)
 
-function letterPokemon() {
-  document.querySelector("#menu_name").style.display = "block"
-  document.querySelector("#page2").style.display = "none"
+ function letterPokemon() {
+   document.querySelector("#menu_name").style.display = "block"
+   document.querySelector("#page2").style.display = "none"
 }
 
 document.querySelector("#attack").addEventListener('click',menuAttack)
@@ -38,12 +32,31 @@ function menuAttack(){
 document.querySelector("#menu_attack").style.display="block"
 document.querySelector("#page2").style.display="none"
 }
-const pokemonData = pokemon.pokemon;
+document.querySelector('#menuType').addEventListener('click', typesPokemon)
 
-let type_pokemon = pokemonData.filter(pokemonData => pokemonData.type == "fire"); 
+function typesPokemon(){
+  document.querySelector('#types').style.display='block'
+  document.querySelector('#menuType').style.display='none'
+}
+const pokemonData=pokemon.pokemon;
 
-console.log(type_pokemon);
+document.getElementById("button_water").addEventListener("click",()=>{
+// //paso uno: filtrar informacion
+ const buttonType= document.getElementById("menuType");
 
+
+ const type_pokemonWater = pokemonData.filter(pokemonData => pokemonData.type.includes("water"));
+//paso 2:pintar esa informacion filtrada 
+ 
+ for(let i=0;i<type_pokemonWater.length;i++){
+   let titlePokemon=document.createElement("h1")
+   titlePokemon.textContent=type_pokemonWater[i].name
+   let list= document.getElementById("types")
+   list.appendChild(titlePokemon)
+
+   console.log(type_pokemonWater[i].name);
+ }
+ });
 
 let attack= pokemonData.map(x => x.stats['base-attack']);
 
@@ -51,49 +64,6 @@ console.log(attack);
 
 attack.sort(orderAttack)
 function orderAttack(a, b) {
-  return a - b
-}
-
-console.log(attack)
-  
-
-const text = document.querySelector('#searchName');
-
-const search = document.querySelector('#search');
-
-const resultadoPokemon = document.querySelector('#pokemon');
-
-const filtrar = ()=> {
-
-  resultadoPokemon.innerHTML = '';
-
-  const textName = text.value.toLowerCase();
-
-  for (let pokemones of pokemonData) {
-    let name = pokemones.name.toLowerCase();
-    if (name.indexOf(textName) !== -1) {
-      resultadoPokemon.innerHTML += `<h1>${pokemones.name}</h1>`
-    }
-  }
-  if (resultadoPokemon.innerHTML === '') {
-    `<h2>Pokemon no encontrado</h2>`
-  }
-}
-search.addEventListener('click', filtrar)
-
-text.addEventListener('keyup', filtrar)
-// filtrar();
-
-
-
-
-// //(captura el valor que se ingresa al input)
-// document.querySelector("#searchName").addEventListener("change",(event)=>{console.log(event.target.value)})
-
-
-
-
-
-
-
-
+  return b - a
+};
+// console.log(attack)
