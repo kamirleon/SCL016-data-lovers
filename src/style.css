@@ -19,7 +19,7 @@ body{
     background-image:url(Imagenes\ 2/calipso.jpg);
     background-repeat: no-repeat;
     background-attachment:scroll;
-    background-size:100%;
+    background-size: cover;
     background-position: center;
     min-height: 100vh;
   
