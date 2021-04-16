@@ -4,6 +4,7 @@ h1{
     line-height: 43px;
     color: #FFD723;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
     
 }
 h2{
@@ -14,7 +15,15 @@ h2{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 }
+h3{
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+    line-height: 43px;
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+    text-align: center;
 
+}
 body{
     background-image:url(Imagenes\ 2/calipso.jpg);
     background-repeat: no-repeat;
@@ -90,7 +99,7 @@ body{
   
     
 }
-.button_1{   
+.button_p{   
     background: linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);
     box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -107,7 +116,7 @@ body{
     color: black;
     background:white;
 }
-.button_1:hover{
+.button_p:hover{
     text-decoration: none;
     color: black;
     background:white;
@@ -130,14 +139,8 @@ button:hover{
   #menu_attack{
       display: none;
   }
-.continer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  
+
     
-    
-}
   .flex-container{
       display: flex;
       flex-direction: column;
@@ -185,22 +188,60 @@ main{
     border-radius:20;
     transform:rotate(-0.41deg);
 }
-.types{
-    
-display: none;
-position: absolute;
-width: 320px;
-height: 100px;
-left: 20.35px;
-top: 100.15px;
 
-background: #F2F2F2;
-mix-blend-mode: overlay;
-opacity: 0.5;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 20px;
+.types{
+    width: 320px;
+    height: 100px;
+    left: 20.35px;
+    top: 100.15px;
 }
 
+.types::before{
+ background: #f2f2f2e1;
+mix-blend-mode:normal;
+opacity: 0.5;
+
+
+}
+.cardContainer{
+    display: flex;
+    width: 100vw;
+    flex-flow: row wrap;
+    height: 85vh;
+    overflow-y: auto;
+
+}
+.styleCard{
+display: flex;
+flex-direction: row;
+justify-content: center;
+background: #fff9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.);
+border-radius: 20px; 
+margin: 50px;
+width: 420px;
+}
+
+.container_attack{
+    display: flex;
+   
+    flex-flow: row wrap;
+    height: 85vh;
+    overflow-y: auto;
+
+}
+.attackCard{
+display: flex;
+flex-direction:column;
+justify-content: center;
+background: #fff9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.);
+border-radius: 20px; 
+margin: 50px;
+width: 300px;
+padding: 20px;
+
+}
 footer{
   position: absolute;
   width: 100%;
