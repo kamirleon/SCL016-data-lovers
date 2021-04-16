@@ -40,36 +40,7 @@ function menuAttack() {
   document.querySelector('#page2').style.display = 'none'
 }
 
-document.getElementById("button_water").addEventListener("click",()=>{
-// //paso uno: filtrar informacion
- const buttonType= document.getElementById("menuType");
-  
-  
-const pokemonData = pokemon.pokemon;
-
- const type_pokemonWater = pokemonData.filter(pokemonData => pokemonData.type.includes("water"));
-//paso 2:pintar esa informacion filtrada 
- 
- for(let i=0;i<type_pokemonWater.length;i++){
-   let titlePokemon=document.createElement("h1")
-   titlePokemon.textContent=type_pokemonWater[i].name
-   let list= document.getElementById("types")
-   list.appendChild(titlePokemon)
-
-   console.log(type_pokemonWater[i].name);
- }
- });
-
-// let attack= pokemonData.map(x => x.stats['base-attack']);
-// console.log(attack);
-// 
-// attack.sort(orderAttack)
-// function orderAttack(a, b) {
-//   return b - a
-// }
-// console.log(attack);
-
-// //(captura el valor que se ingresa al input)
+//(captura el valor que se ingresa al input)
 document.querySelector("#searchName").addEventListener("keyup", (event) => {
 
   const listaFiltrada = pokemonData.filter(poke => poke.name.startsWith(event.target.value))
@@ -79,17 +50,18 @@ document.querySelector("#searchName").addEventListener("keyup", (event) => {
  // console.log(listaFiltrada)
 
   for (let i = 0; i < listaFiltrada.length; i++) {
-    let list_name = document.createElement("h2")
-    list_name.textContent = listaFiltrada[i].name
-    // list_name.addEventListener('click', letterPokemon)
     let list = document.getElementById("list_pokemon")
+    let list_name = document.createElement("li")
+    list_name.textContent = listaFiltrada[i].name
+    let num_poke = document.createElement("h4")
+    num_poke.textContent = listaFiltrada[i].num
+    // list_name.addEventListener('click', letterPokemon)
     let img_poke = document.createElement("img")
     img_poke.src = listaFiltrada[i].img
-
+    list_name.appendChild(img_poke)
+    list_name.appendChild(num_poke)
     list.appendChild(list_name)
-    list.appendChild(img_poke)
-
-    //console.log(listaFiltrada[i].name);
+   
   }
 }
 );
