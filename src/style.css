@@ -256,3 +256,19 @@ footer{
   transform: rotate(-0.04deg);
 
 }
+#list_pokemon{
+    font-size: 3rem;
+    padding: 20px;
+}
+#list_pokemon li {
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: row-reverse;
+    border: 3px solid black;
+    overflow-y: auto;
+    border-radius: 20px;
+    padding: 15px;
+    background: #fff6;
+}

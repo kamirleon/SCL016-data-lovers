@@ -40,6 +40,7 @@ const menuAttack = () => {
 }
 document.querySelector('#attack').addEventListener('click', menuAttack)
 
+
 const pokemonData = pokemon.pokemon;
 
 //traer para los types los datos que necesito son la imagen,nombre y numero. 
@@ -123,17 +124,18 @@ document.querySelector("#searchName").addEventListener("keyup", (event) => {
   console.log(listaFiltrada)
 
   for (let i = 0; i < listaFiltrada.length; i++) {
-    let list_name = document.createElement("h2")
-    list_name.textContent = listaFiltrada[i].name
-    // list_name.addEventListener('click', letterPokemon)
     let list = document.getElementById("list_pokemon")
+    let list_name = document.createElement("li")
+    list_name.textContent = listaFiltrada[i].name
+    let num_poke = document.createElement("h4")
+    num_poke.textContent = listaFiltrada[i].num
+    // list_name.addEventListener('click', letterPokemon)
     let img_poke = document.createElement("img")
     img_poke.src = listaFiltrada[i].img
-
+    list_name.appendChild(img_poke)
+    list_name.appendChild(num_poke)
     list.appendChild(list_name)
-    list.appendChild(img_poke)
-
-    //console.log(listaFiltrada[i].name);
+   
   }
 }
 )
