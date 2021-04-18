@@ -275,7 +275,6 @@ footer{
 
 }
 #list_pokemon{
-    font-size: 3rem;
     padding: 20px;
 }
 #list_pokemon li {
@@ -293,7 +292,7 @@ footer{
     height: 200px;
 }
 
-#list_pokemon h5{
+#list_pokemon h3{
     padding: 1px 1px 1px 10px;
     margin-top: 10px ;
 }
