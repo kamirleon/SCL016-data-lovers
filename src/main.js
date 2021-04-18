@@ -52,7 +52,7 @@ buttonP.forEach(e => {
     const buttonP = event.currentTarget.id;
     //por que es diferente usar target y currentTarget...por q por ejemplo con boton water no funciona ...
 
-    document.querySelector("#typeTitle").innerHTML = "Tipo " + event.currentTarget.textContent
+    document.querySelector("#typeTitle").innerHTML = "Tipo  " + event.currentTarget.textContent
 
     const types_pokemons = pokemonData.filter(pokemonData => pokemonData.type.includes(buttonP));
     console.log(types_pokemons)
@@ -93,7 +93,7 @@ const viewAttack = document.querySelector("#list_attack");
 for (let i=0; i<attack.length;i++){
   let card = document.createElement("div")
       card.className = "attackCard"
-  let num_poke= document.createElement("h3")
+  let num_poke= document.createElement("h4")
   num_poke.textContent= "N° "+attack[i].num
   let img_attack= document.createElement("img")
   img_attack.src= attack[i].img
