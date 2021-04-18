@@ -27,7 +27,7 @@ h3{
 body{
     background-image:url(Imagenes\ 2/calipso.jpg);
     background-repeat: no-repeat;
-    background-attachment:scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -263,12 +263,23 @@ footer{
 #list_pokemon li {
     font-family: 'Russo One', sans-serif;
     display: flex;
-    justify-content: center;
-    margin: 10px;
+    justify-content:space-around;
+    margin: 20px;
     flex-direction: row-reverse;
     border: 3px solid black;
     overflow-y: auto;
     border-radius: 20px;
     padding: 15px;
     background: #fff6;
+    width: 450px;
+    height: 200px;
 }
+
+#list_pokemon h5{
+    padding: 1px 1px 1px 10px;
+    margin-top: 10px ;
+}
+/* .element_list{
+    display: flex;  
+    flex-direction: row;
+} */

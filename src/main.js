@@ -126,14 +126,18 @@ document.querySelector("#searchName").addEventListener("keyup", (event) => {
   for (let i = 0; i < listaFiltrada.length; i++) {
     let list = document.getElementById("list_pokemon")
     let list_name = document.createElement("li")
-    list_name.textContent = listaFiltrada[i].name
-    let num_poke = document.createElement("h4")
-    num_poke.textContent = listaFiltrada[i].num
+    let info = document.createElement("div")
+    let name_poke = document.createElement("h2")
+    name_poke.textContent = listaFiltrada[i].name
+    let num_poke = document.createElement("h5")
+    num_poke.textContent = "N° " + listaFiltrada[i].num
     // list_name.addEventListener('click', letterPokemon)
     let img_poke = document.createElement("img")
     img_poke.src = listaFiltrada[i].img
+    info.appendChild(name_poke)
+    info.appendChild(num_poke)
+    list_name.appendChild(info)
     list_name.appendChild(img_poke)
-    list_name.appendChild(num_poke)
     list.appendChild(list_name)
    
   }
