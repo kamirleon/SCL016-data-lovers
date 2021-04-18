@@ -129,7 +129,7 @@ document.querySelector("#searchName").addEventListener("keyup", (event) => {
     let info = document.createElement("div")
     let name_poke = document.createElement("h2")
     name_poke.textContent = listaFiltrada[i].name
-    let num_poke = document.createElement("h5")
+    let num_poke = document.createElement("h3")
     num_poke.textContent = "N° " + listaFiltrada[i].num
     // list_name.addEventListener('click', letterPokemon)
     let img_poke = document.createElement("img")

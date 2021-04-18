@@ -36,11 +36,8 @@ h4{
 body{
     background-image:url(Imagenes\ 2/calipso.jpg);
     background-repeat: no-repeat;
-<<<<<<< HEAD
     background-attachment: fixed;
-=======
     background-attachment:fixed;
->>>>>>> 365ff0861e51048d0f73960a2d7dbbb2bae5375c
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -277,7 +274,6 @@ footer{
 
 }
 #list_pokemon{
-    font-size: 3rem;
     padding: 20px;
 }
 #list_pokemon li {
@@ -295,7 +291,7 @@ footer{
     height: 200px;
 }
 
-#list_pokemon h5{
+#list_pokemon h3{
     padding: 1px 1px 1px 10px;
     margin-top: 10px ;
 }
