@@ -37,10 +37,9 @@ body{
     background-image:url(Imagenes\ 2/calipso.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-attachment:fixed;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   
 }
 .animated {
@@ -156,7 +155,7 @@ button:hover{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20%;
+      padding: 47%;
 
 
   }
@@ -200,7 +199,7 @@ main{
 }
 .containerTitle{
     width: 500px;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .types{
@@ -283,7 +282,8 @@ footer{
     justify-content:space-around;
     margin: 20px;
     flex-direction: row-reverse;
-    border: 3px solid black;
+    border: 3px linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);;
+    border-style: outset;
     overflow-y: auto;
     border-radius: 20px;
     padding: 15px;
