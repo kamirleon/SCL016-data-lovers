@@ -18,8 +18,6 @@ function showType() {
 }
 buttonType.addEventListener('click', showType)
 // mostrar cartilla de pokemones
-// document.querySelector('#search').addEventListener('click',letterPokemon)
-
 // function letterPokemon() {
 //   document.querySelector("#menu_name").style.display = "block"
 //   document.querySelector("#page2").style.display = "none"
@@ -40,8 +38,6 @@ const typesPokemon = () => {
 }
 document.querySelector('#menuType').addEventListener('click', typesPokemon)
 
-
-
 // funcion mostar vista de ataque
 const menuAttack = () => {
   document.querySelector('#menu_attack').style.display = 'block'
@@ -60,8 +56,6 @@ buttonP.forEach(e => {
     document.querySelector('#typeTitle').innerHTML = 'Tipo  ' + event.currentTarget.textContent
 
     const types_pokemons = pokemonData.filter(pokemonData => pokemonData.type.includes(buttonP));
-    console.log(types_pokemons)
-
 
     for (let i = 0; i < types_pokemons.length; i++) {
 
@@ -82,7 +76,8 @@ buttonP.forEach(e => {
       card.appendChild(img_poke)
       card.appendChild(infoCard)
 
-      document.querySelector('#cardType').appendChild(card)
+     document.querySelector('#cardType').appendChild(card)
+
     }
   })
 
@@ -113,14 +108,15 @@ for (let i = 0; i < attack.length; i++) {
   card.appendChild(num_attack)
 
   viewAttack.appendChild(card)
-
 }
+
 //(captura el valor que se ingresa al input)
 document.querySelector('#searchName').addEventListener('keyup', (event) => {
 
   const listFilter = pokemonData.filter(poke => poke.name.startsWith(event.target.value))
   let list2 = document.getElementById('list_pokemon')
   list2.innerHTML = ''
+
 
   if (event.target.value.length === 0 && event.key === 'Backspace') return
   for (let i = 0; i < listFilter.length; i++) {
