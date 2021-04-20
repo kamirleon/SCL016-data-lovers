@@ -19,8 +19,6 @@ function showType() {
 }
 buttonType.addEventListener('click', showType)
 // mostrar cartilla de pokemones
-// document.querySelector('#search').addEventListener('click',letterPokemon)
-
 // function letterPokemon() {
 //   document.querySelector("#menu_name").style.display = "block"
 //   document.querySelector("#page2").style.display = "none"
@@ -30,8 +28,6 @@ const typesPokemon = () => {
   document.querySelector('#menuType').style.display = 'none'
 }
 document.querySelector('#menuType').addEventListener('click', typesPokemon)
-
-
 
 // funcion mostar vista de ataque
 const menuAttack = () => {
@@ -55,8 +51,7 @@ buttonP.forEach(e => {
     document.querySelector("#typeTitle").innerHTML = "Tipo  " + event.currentTarget.textContent
 
     const types_pokemons = pokemonData.filter(pokemonData => pokemonData.type.includes(buttonP));
-    console.log(types_pokemons)
-
+    
     for (let i = 0; i < types_pokemons.length; i++) {
 
       let card = document.createElement("div")
@@ -77,8 +72,6 @@ buttonP.forEach(e => {
       card.appendChild(infoCard)
 
       document.querySelector("#cardType").appendChild(card)
-
-      console.log(types_pokemons[i].name);
     }
   })
 
@@ -87,7 +80,7 @@ buttonP.forEach(e => {
 const attack = pokemonData.sort((a, b) => {
   return b.stats['base-attack'] - a.stats['base-attack'];
 })
-console.log(attack)
+
 const viewAttack = document.querySelector("#list_attack");
 
 for (let i=0; i<attack.length;i++){
@@ -109,9 +102,7 @@ for (let i=0; i<attack.length;i++){
   card.appendChild(num_attack)
 
   viewAttack.appendChild(card)
-  
-  console.log(litleAttack)
-  console.log(img_attack)
+
 }
 
 //(captura el valor que se ingresa al input)
@@ -120,9 +111,8 @@ document.querySelector("#searchName").addEventListener("keyup", (event) => {
   const listaFiltrada = pokemonData.filter(poke => poke.name.startsWith(event.target.value))
   let list2 = document.getElementById("list_pokemon")
   list2.innerHTML = ''
-
-  console.log(listaFiltrada)
-
+  if(event.target.value.length === 0 && event.key === 'Backspace') return
+  
   for (let i = 0; i < listaFiltrada.length; i++) {
     let list = document.getElementById("list_pokemon")
     let list_name = document.createElement("li")
@@ -131,7 +121,7 @@ document.querySelector("#searchName").addEventListener("keyup", (event) => {
     name_poke.textContent = listaFiltrada[i].name
     let num_poke = document.createElement("h3")
     num_poke.textContent = "N° " + listaFiltrada[i].num
-    // list_name.addEventListener('click', letterPokemon)
+   // list_name.addEventListener('click', letterPokemon)
     let img_poke = document.createElement("img")
     img_poke.src = listaFiltrada[i].img
     info.appendChild(name_poke)
@@ -139,7 +129,6 @@ document.querySelector("#searchName").addEventListener("keyup", (event) => {
     list_name.appendChild(info)
     list_name.appendChild(img_poke)
     list.appendChild(list_name)
-   
   }
 }
 )

@@ -204,6 +204,8 @@ main{
 }
 
 .types{
+    display: flex;
+    flex-direction: column;
     width: 320px;
     height: 100px;
     left: 20.35px;
