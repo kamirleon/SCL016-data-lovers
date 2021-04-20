@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div id="root"></div>
+
+  <section class="page_welcome" id="page1">
+    <div class="flex-container">
+      <img src="Imagenes 2/bienvenido 1 3 copia 1.png" width="450">
+      <input id="start" class="animated flash" TYPE="IMAGE" SRC="Imagenes 2/pokebola.png" width="300">
+
+      <img src="Imagenes 2/Name page.png" alt="name of page" width="450">
+    </div>
+    <!-- agregar imagen de bienvendo -->
+  </section>
+
+  <section class="menu" id="page2">
+    <div class="flex-container">
+      <div>
+        <h1>Busca tu Pokémon!!</h1>
+      </div>
+      <div>
+        <input type="text" placeholder="nombre" id="searchName">
+      </div>
+
+      <div>
+        <button class="button" id="type"> Tipo</button>
+      </div>
+      <div>
+        <button class="button" id="attack"> Ataque</button>
+      </div>
+
+      <div class="list_pokemon">
+        <ul id="list_pokemon">
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  <!-- seccion cartilla -->
+  <section class="menu_name" id="menu_name">
+
+
+
+    <header>
+      
+      <h2 id="pokemon">
+
+      </h2>
+
+      <img src="imagenes 2/pokebola_abierta.png" alt="20">
+    </header>
+
+    <main>
+      <h3>Tipo:</h3>
+      <h3>Resistente</h3>
+      <h3>Debilidades</h3>
+    </main>
+
+    <footer>
+      <h1>Evoluciones</h1>
+    </footer>
+  </section>
+
+  <section class="menu_type" id="menuType">
+    <div class="container">
+      <h1>Tipo de Pokémon</h1>
+      <button class="button_p" id="water">Agua<img src="imagenes 2/Type_Agua.png" width="50"></button>
+      <button class="button_p" id="ground">Tierra<img src="imagenes 2/Type_Tierra.png" width="50"></button>
+      <button class="button_p" id="fire">Fuego<img src="imagenes 2/Type_Fuego.png" width="50"></button>
+      <button class="button_p" id="grass">Planta<img src="imagenes 2/Type_Planta.png" width="50"></button>
+      <button class="button_p" id="electric">Eléctrico<img src="imagenes 2/Type_El ctrico.png" width="50"></button>
+      <button class="button_p" id="fighting">Lucha<img src="imagenes 2/Type_Lucha.png" width="50"></button>
+      <button class="button_p" id="ghost">Fantasma<img src="imagenes 2/Type_Fantasma.png" width="50"></button>
+      <button class="button_p" id="poison">Veneno<img src="imagenes 2/Type_Poison.png" width="50"></button>
+      <button class="button_p" id="flying">Volador<img src="imagenes 2/Type_Volador.png" width="50"></button>
+      <button class="button_p" id="rock">Roca<img src="imagenes 2/Type_Roca.png" width="50"></button>
+      <button class="button_p" id="dragon">Dragón<img src="imagenes 2/Type_Drag n.png" width="50"></button>
+      <button class="button_p" id="bug">Bicho<img src="imagenes 2/Type_Bug.png" width="50"></button>
+      <button class="button_p" id="psychic">Psíquico<img src="imagenes 2/Type_Ps quico.png" width="50"></button>
+      <button class="button_p" id="steel">Acero<img src="imagenes 2/Type_Steel.png" width="50"></button>
+      <button class="button_p" id="fairy">Hada<img src="imagenes 2/Type_Hada.png" width="50"></button>
+      <button class="button_p" id="normal">Normal<img src="imagenes 2/Type_Normal.png" width="50"></button>
+      <button class="button_p" id="ice">Hielo<img src="imagenes 2/Type_Ice.png" width="50"></button>
+      <button class="button_p" id="dark">Siniestro<img src="imagenes 2/Type_Steel.png" width="50"></button>
+    </div>
+  </section>
+
+  <section class="types" id="types">
+
+    <div class="arrow">
+    <img src="imagenes 2/arrow2.png" width="50px" alt="">
+    </div>
+  
+    <div class="containerTitle" >
+      
+      <h1 class="typeTitle" id="typeTitle" ></h1>
+    </div>
+    <div class="container cardContainer" id="cardType"></div>
+  </section>
+
+  <section class="menu_attack" id="menu_attack">
+  <div>
+      <h1>Ataque</h1>
+      </div>
+      <div class="container_attack" id="list_attack"></div>
+    
+  </section>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

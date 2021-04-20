@@ -1,0 +1,304 @@
+h1{
+    font-family: 'Russo One', sans-serif;
+    font-size: 60px;
+    line-height: 43px;
+    color: #FFD723;
+    text-align: center;
+    letter-spacing:normal;
+    text-shadow: -2px -2px 0px #3065B3, 8px -2px 0px #3065B3, -2px 6px 0px #3065B3, 8px 8px 8px #3065B3;
+}
+
+h2{
+  font-family: 'Russo One', sans-serif;
+    font-size: 36px;
+    line-height: 0px;
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    
+}
+h3{
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+    line-height: 43px;
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+    text-align: center;
+}
+h4{
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+    line-height: 43px;
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+    text-align: right;  
+}
+body{
+    background-image:url(Imagenes\ 2/calipso.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /* min-height: 100vh; */
+  
+}
+.animated {
+    -webkit-animation-duration: 10s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:initial;
+   }
+   @-webkit-keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+   25%, 75% {
+    opacity: 0;
+    }
+   }
+   @keyframes flash {
+    0%, 50%, 100% {
+    opacity: 20;
+    }
+   25%, 75% {
+    opacity: 0;
+    }
+   }
+   .flash {
+    -webkit-animation-name:initial;
+    animation-name: flash;
+   }
+
+#searchName{
+   border-radius: 20px;
+   background: linear-gradient(90.6deg, #ffffff 22.14%, #B3B3B3 93.61%);
+   padding: 10px;
+    width: 250px;
+    margin: 25px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    text-align: center;
+
+
+}
+#search{
+    background: linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);
+    box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 15px;
+    
+
+}
+
+.button{
+    background: linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);
+    box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 10px;
+    width: 250px;
+    margin: 25px;
+  
+    
+}
+.button_p{   
+    background: linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);
+    box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 10px;
+    width: 250px;
+    margin: 25px;
+
+}
+.button_1{
+    text-decoration: none;
+    color: black;
+    background:white;
+}
+.button_p:hover{
+    text-decoration: none;
+    color: black;
+    background:white;
+
+}
+
+button:hover{
+    text-decoration: none;
+    color: black;
+    background:white;
+  }
+  .menu{
+      display: none;
+  }
+  
+  .menu_type{
+      display: none;
+
+  }
+  #menu_attack{
+      display: none;
+  }
+
+    
+  .flex-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 47%;
+
+
+  }
+
+.menu_name{
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+
+
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    height: 71.24px;
+    left: 0px;
+    top: 47.23px;
+
+    background: #F2F2F2;
+    mix-blend-mode: overlay;
+    opacity: 0.7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-0.04deg);
+}
+main{
+    position: center;
+    width: 80%;
+    height: 311.24px;
+    left: 11px;
+    top: 100%;
+    
+    background: #F2F2F2;
+    mix-blend-mode: overlay;
+    opacity:0.7;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius:20;
+    transform:rotate(-0.41deg);
+}
+.containerTitle{
+    width: 500px;
+    justify-content: space-around;
+}
+
+.types{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 100px;
+    left: 20.35px;
+    top: 100.15px;
+}
+
+.types::before{
+ background: #f2f2f2e1;
+mix-blend-mode:normal;
+opacity: 0.5;
+
+
+}
+.cardContainer{
+    display: flex;
+    width: 100vw;
+    flex-flow: row wrap;
+    height: 85vh;
+    overflow-y: auto;
+    justify-content: center;
+
+}
+.styleCard{
+display: flex;
+flex-direction: row;
+justify-content:space-around;
+background: #fff9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.);
+border-radius: 20px; 
+margin: 50px;
+width: 420px;
+padding: 20px;
+height: 180px;
+}
+
+.container_attack{
+    display: flex;
+   justify-content: center;
+    flex-flow: row wrap;
+    height: 85vh;
+    overflow-y: auto;
+
+}
+
+.attackCard{
+display: flex;
+flex-direction:column;
+justify-content: center;
+background: #fff9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.);
+border-radius: 20px; 
+margin: 50px;
+width: 300px;
+padding: 20px;
+
+}
+footer{
+  position: absolute;
+  width: 100%;
+  height: 71.24px;
+  left: 0px;
+  top: 47.23px;
+
+  background: #F2F2F2;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-0.04deg);
+
+}
+#list_pokemon{
+    padding: 20px;
+}
+#list_pokemon li {
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    justify-content:space-around;
+    margin: 20px;
+    flex-direction: row-reverse;
+    border: 3px linear-gradient(90.6deg, #FFFFFF 22.14%, #B3B3B3 93.61%);;
+    border-style: outset;
+    overflow-y: auto;
+    border-radius: 20px;
+    padding: 15px;
+    background: #fff6;
+    width: 450px;
+    height: 200px;
+}
+
+#list_pokemon h3{
+    padding: 1px 1px 1px 10px;
+    margin-top: 10px ;
+}
+/* .element_list{
+    display: flex;  
+    flex-direction: row;
+} */
